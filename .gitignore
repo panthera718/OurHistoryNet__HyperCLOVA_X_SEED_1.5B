@@ -1,0 +1,18 @@
+# outputs / data
+nh_raw.jsonl
+history_sft_train.jsonl
+HyperCLOVAX-history-lora-fp16/
+*.pt
+*.bin
+*.safetensors
+
+# caches
+__pycache__/
+*.pyc
+.cache/
+.huggingface/
+wandb/
+
+# env
+venv/
+.venv/
