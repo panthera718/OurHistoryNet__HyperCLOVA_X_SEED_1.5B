@@ -19,7 +19,7 @@ from peft import (
 BASE_MODEL_PATH = "naver-hyperclovax/HyperCLOVAX-SEED-Text-Instruct-1.5B"
 DATA_PATH       = "history_sft_train.jsonl"
 OUTPUT_DIR      = "./HyperCLOVAX-history-lora-fp16"
-MAX_SEQ_LEN     = 4096
+MAX_SEQ_LEN     = 2048
 
 TARGET_MODULES = [
     "q_proj",

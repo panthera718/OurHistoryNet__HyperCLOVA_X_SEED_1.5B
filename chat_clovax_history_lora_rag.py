@@ -175,10 +175,10 @@ def main():
         with torch.no_grad():
             output_ids = model.generate(
                 **inputs,
-                max_new_tokens=4096,   # Number of new tokens to be created
+                max_new_tokens=2048,   # Number of new tokens to be created
                 do_sample=True,
-                top_p=0.9,
-                temperature=0.8,
+                top_p=0.75,
+                temperature=0.75,
                 eos_token_id=tokenizer.eos_token_id,
             )
 

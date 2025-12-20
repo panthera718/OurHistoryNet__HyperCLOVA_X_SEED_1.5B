@@ -11,7 +11,7 @@ START_URL = "https://contents.history.go.kr/front/nh/view.do?levelId=nh_009_0020
 DOMAIN = "contents.history.go.kr"
 OUTPUT_PATH = "nh_raw.jsonl"
 
-MAX_PAGES = 20  # Safety device: Avoid scratching too much
+MAX_PAGES = 50  # Safety device: Avoid scratching too much
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; ClovaX-StudyBot/1.0)"

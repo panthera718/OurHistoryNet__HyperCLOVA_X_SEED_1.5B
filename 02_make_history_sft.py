@@ -6,7 +6,7 @@ RAW_PATH = "nh_raw.jsonl"
 OUT_PATH = "history_sft_train.jsonl"
 
 # When dividing a very long text, use the following character criteria (roughly):
-MAX_CHARS = 2000   # Maximum length of one chunk
+MAX_CHARS = 1000   # Maximum length of one chunk
 MIN_CHARS = 100   # Discard chunks that are too short
 
 INSTRUCTION_TEMPLATE = (
