@@ -16,7 +16,8 @@ from peft import (
     get_peft_model,
 )
 
-BASE_MODEL_PATH = "naver-hyperclovax/HyperCLOVAX-SEED-Text-Instruct-1.5B"
+#BASE_MODEL_PATH = "naver-hyperclovax/HyperCLOVAX-SEED-Text-Instruct-1.5B"
+BASE_MODEL_PATH = "./HyperCLOVAX-SEED-Text-Instruct-1.5B"
 DATA_PATH       = "history_sft_train.jsonl"
 OUTPUT_DIR      = "./HyperCLOVAX-history-lora-fp16"
 MAX_SEQ_LEN     = 2048

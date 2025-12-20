@@ -11,7 +11,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 # ==========================
 # Set route
 # ==========================
-BASE_MODEL_PATH = "naver-hyperclovax/HyperCLOVAX-SEED-Text-Instruct-1.5B"
+#BASE_MODEL_PATH = "naver-hyperclovax/HyperCLOVAX-SEED-Text-Instruct-1.5B"
+BASE_MODEL_PATH = "./HyperCLOVAX-SEED-Text-Instruct-1.5B"
 LORA_PATH       = "./HyperCLOVAX-history-lora-fp16"
 DOCS_PATH       = "nh_raw.jsonl"   # 01_crawl_nh_raw.py 결과 파일
 
@@ -177,8 +178,8 @@ def main():
                 **inputs,
                 max_new_tokens=2048,   # Number of new tokens to be created
                 do_sample=True,
-                top_p=0.75,
-                temperature=0.75,
+                top_p=0.4,
+                temperature=0.8,
                 eos_token_id=tokenizer.eos_token_id,
             )
 
