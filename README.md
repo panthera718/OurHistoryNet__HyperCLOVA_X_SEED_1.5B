@@ -50,7 +50,7 @@ python 01_crawl_nh_raw.py
 
 * 기본 시작 URL: `START_URL = "https://contents.history.go.kr/front/nh/view.do?levelId=nh_009_0020"` 
 * 출력: `nh_raw.jsonl` 
-* 과도한 크롤링 방지를 위해 `MAX_PAGES = 20` 제한이 걸려 있음. 
+* 과도한 크롤링 방지를 위해 `MAX_PAGES = 50` 제한이 걸려 있음. 
 * 서버 부하 완화를 위해 페이지당 `time.sleep(0.4)` 지연이 들어가 있음. 
 
 ---
@@ -79,7 +79,7 @@ python 03_train_clovax_lora_fp16.py
 * Base model: `naver-hyperclovax/HyperCLOVAX-SEED-Text-Instruct-1.5B` 
 * Train data: `history_sft_train.jsonl` 
 * Output dir: `./HyperCLOVAX-history-lora-fp16` 
-* `MAX_SEQ_LEN = 4096` 
+* `MAX_SEQ_LEN = 2048` 
 * LoRA target modules: `q_proj, k_proj, v_proj, ...` 
 * 메모리 절약: gradient checkpointing 활성화 + `use_cache=False` 
 * 학습 하이퍼파라미터(예): bs=1, grad_acc=8, epochs=2, lr=2e-4, fp16=True 
@@ -93,7 +93,7 @@ python chat_clovax_history_lora_rag.py
 ```
 
 * 문서 로드: `nh_raw.jsonl` 
-* 생성 파라미터(예): `max_new_tokens=4096, top_p=0.9, temperature=0.8` 
+* 생성 파라미터(예): `max_new_tokens=2048, top_p=0.4, temperature=0.8` 
 * 종료: `exit` 또는 `quit` 입력 
 
 ---
