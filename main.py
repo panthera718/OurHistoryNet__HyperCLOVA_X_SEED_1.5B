@@ -47,10 +47,10 @@ while True:
     with torch.no_grad():
         output_ids = model.generate(
             **inputs,
-            max_length=1024,
+            max_length=2048,
             do_sample=True,
-            top_p=0.95,
-            temperature=0.7,
+            top_p=0.4,
+            temperature=0.8,
             eos_token_id=tokenizer.eos_token_id
         )
 
